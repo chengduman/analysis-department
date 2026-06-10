@@ -1,0 +1,41 @@
+# 数据准确性审核（二级审核）
+name: ✅ 数据准确性审核
+description: 调研报告中的数据进行准确性复核（赵文博部长）
+title: "[数据审核] "
+labels: ["数据审核"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 数据准确性审核（二级审核）
+        审核人：赵文博部长
+  - type: input
+    id: report-ref
+    attributes:
+      label: 关联报告/数据文件
+      placeholder: 填写报告名称或数据文件路径
+    validations:
+      required: true
+  - type: textarea
+    id: data-points
+    attributes:
+      label: 待审核数据点
+      placeholder: 逐条列出需要验证的关键数据
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 审核清单
+      options:
+        - label: 数据来源明确且可信
+        - label: 计算逻辑正确（均数/增长率/占比等）
+        - label: 数据单位和量级正确
+        - label: 异常值已标注或已处理
+        - label: 图表中的数据与正文一致
+  - type: textarea
+    id: notes
+    attributes:
+      label: 部长意见
+      placeholder: 审核结论、修正建议或驳回理由
