@@ -1,0 +1,55 @@
+# 分析任务
+name: 📊 数据分析任务
+description: 提交数据分析需求或指派分析任务
+title: "[分析] "
+labels: ["数据分析", "待排期"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 数据分析任务
+        赵文博部长负责排期分配
+  - type: dropdown
+    id: type
+    attributes:
+      label: 分析类型
+      options:
+        - 数据分析报告
+        - 统计建模（回归/预测/聚类）
+        - 可视化图表
+        - 数据看板/Dashboard
+        - 数据清洗与预处理
+    validations:
+      required: true
+  - type: textarea
+    id: requirement
+    attributes:
+      label: 分析需求说明
+      placeholder: 需要分析什么数据？希望得到什么结论？
+    validations:
+      required: true
+  - type: input
+    id: data-source
+    attributes:
+      label: 数据来源/附件
+      placeholder: 说明数据位置或上传数据文件
+  - type: dropdown
+    id: assign
+    attributes:
+      label: 指派给
+      options:
+        - 赵文博（部长分配）
+        - 孙志强（高级分析师-建模）
+        - 林晓雅（高级分析师-可视化）
+        - 郑天宇（分析师）
+        - 黄梓涵（分析师）
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options:
+        - 紧急
+        - 重要
+        - 常规
+        - 待定
